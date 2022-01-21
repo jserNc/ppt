@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>部门年会</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.reveal-viewport {
+				background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%); 
+				/* background-image: repeating-radial-gradient( ellipse at center center, rgb(249, 212, 35), rgb(239, 71, 93), rgb(249, 212, 35), rgb(191, 53, 83), rgb(236, 44, 100), rgb(209, 26, 45), rgb(249, 212, 35), rgb(166, 27, 41) 0.001px ); */
+			}
+
+			.gift-pic {
+				background-image: url("./images/gift.png");
+				background-position: 0px 0px;
+				width: 520px;
+				height: 470px;
+			}
+
+			.flex-box {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.text {
+				text-align: start;
+			}
+
+			.text.des {
+				margin-top: -60px;
+    		margin-bottom: -20px;
+			}
+
+			@keyframes rotate{
+				from{-webkit-transform:rotate(0deg)}
+				to{-webkit-transform:rotate(360deg)}
+			}
+
+			.cd {
+				height: 250px;
+				width: 250px;
+				margin-right: 80px;
+				border-radius: 1250px;
+				background-color: #fff;
+				animation: 9.5s linear 0s normal none infinite rotate;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="convex" data-background-transition="convex">
+					<div class="flex-box">
+						<img data-src="./images/qrcode1.png" style="height: 420px;margin-right:80px;">
+						<div>
+							<p>扫码关注公众号【好弹幕】，即可发送弹幕</p>
+							<ol style="margin-left:12px;">
+								<li>点击欢迎消息中的同意授权提示</li>
+								<li style="margin-top:10px;">大屏互动-大屏互动，进入弹幕输入界面</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+				<section data-transition="convex" data-background-transition="convex">
+					<img data-src="./images/tiger.png" style="height: 420px;">
+					<h3>2021上海总公司</h3>
+					<p>人力资源中心小年会</p>
+					<p class="fragment" id="zhuye">
+						<audio id="a-zhuye" style="display: none;" loop="loop" autoplay="autoplay" src="./bgm/zhuye.mp3"></audio>
+					</p>
+				</section>
+				<section data-transition="convex" data-background-transition="convex">
+					<div class="flex-box">
+						<img data-src="./images/fortune.png" style="height: 420px;margin-right: 80px;">
+						<h3>新年致辞</h3>
+						<p class="fragment" id="zhici">
+							<audio style="display: none;" loop="loop" autoplay="autoplay" id="a-zhici" src="./bgm/zhici.mp3"></audio>
+						</p>
+						<p class="fragment" style="display: none;" id="zhici-stop"></p>
+					</div>
+				</section>
+				<section data-transition="convex" data-background-transition="convex">
+					<div class="flex-box">
+						<img data-src="./images/fortune.png" style="height: 420px;margin-right: 80px;">
+						<h3>晚宴正式开始</h3>
+					</div>
+					<p id="wanyan">
+						<audio style="display: none;" loop="loop" src="./bgm/zhuye.mp3"></audio>
+					</p>
+				</section>
+				<section data-transition="convex" data-background-transition="convex">
+					<div class="flex-box">
+						<img src="./images/game.png" style="height: 300px;">
+						<h3>游戏-虎虎生威</h3>
+					</div>
+					<p class="text des"><small>游戏规则：</small></p>
+					<p class="text">5人1组，共2组，排队站好后，每人手持一根筷子竖向用嘴咬住筷子一头，用筷子上面一头将纸杯传递到下一位队友处，5名队友一次传递，最后一名将纸杯放入纸箱，纸杯中途掉落或没有进入纸箱不计数，3分钟内纸箱中纸杯数量最多者获胜</p>
+					<p id="huhushengwei">
+						<audio style="display: none;" loop="loop" id="a-bg-huhushengwei" src="./bgm/game1.mp3"></audio>
+					</p>
+					<p class="fragment" id="huhushengwei-frg">
+						<audio style="display: none;" loop="loop" autoplay="autoplay" src="./bgm/huhushengwei.mp3"></audio>
+					</p>
+				</section>
+				<section data-transition="convex" data-background-transition="convex">
+					<div class="flex-box">
+						<img style="margin-right: 80px;" data-src="./images/music4.png" class="cd">
+						<div>
+							<h2>发如雪</h2>
+							<p>演唱：嘉宾</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="flex-box">
+						<div class="gift-pic"></div>
+						<div>
+							<h3>欢乐大抽奖</h3>
+							<p>三等奖（3名），OralB电动牙刷、刷头</p>
+						</div>
+					</div>
+				</section>
+				<section data-background-iframe="../DZMLuckyDraw/lucky-draw.html?awardType=3" data-background-interactive>
+					<p id="sandengjiang">
+						<audio style="display: none;" loop="loop" autoplay="autoplay" src="./bgm/choujiang.mp3"></audio>
+					</p>
+				</section>
+				<section data-transition="convex" data-background-transition="convex">
+					<div class="flex-box">
+						<img src="./images/game.png" style="height: 300px;">
+						<h3>游戏-虎头虎脑</h3>
+					</div>
+					<p class="text des"><small>游戏规则：</small></p>
+					<p class="text">5人1组，共2组，排队站好后，每人手持一根筷子竖向用嘴咬住筷子一头，用筷子上面一头将纸杯传递到下一位队友处，5名队友一次传递，最后一名将纸杯放入纸箱，纸杯中途掉落或没有进入纸箱不计数，3分钟内纸箱中纸杯数量最多者获胜</p>
+					<p id="hutouhunao">
+						<audio style="display: none;" loop="loop" id="a-bg-hutouhunao" src="./bgm/game2.mp3"></audio>
+					</p>
+					<p class="fragment" id="hutouhunao-frg">
+						<audio style="display: none;" loop="loop" autoplay="autoplay" src="./bgm/hutouhunao.mp3"></audio>
+					</p>
+				</section>
+				<section>
+					<div class="flex-box">
+						<div class="gift-pic"></div>
+						<div>
+							<h3>欢乐大抽奖</h3>
+							<p>二等奖（3名），小米踢脚线电暖器</p>
+						</div>
+					</div>
+				</section>
+				<section data-background-iframe="../DZMLuckyDraw/lucky-draw.html?awardType=2" data-background-interactive>
+					<p id="erdengjiang">
+						<audio style="display: none;" loop="loop" autoplay="autoplay" src="./bgm/choujiang.mp3"></audio>
+					</p>
+				</section>
+				<section data-transition="convex" data-background-transition="convex">
+					<div>
+						<p style="display: none;" class="fragment" id="shenglonghuohu-frg">
+							<audio loop="loop" autoplay="autoplay" src="./bgm/shenglonghuohu.mp3"></audio>
+						</p>
+						<p id="timer" style="font-size:100px;margin-bottom: -70px;margin-top: -30px;"></p>
+					</div>
+					<div class="flex-box">
+						<img src="./images/game.png" style="height: 300px;">
+						<h3>游戏-生龙活虎</h3>
+					</div>
+					<p class="text des"><small>游戏规则：</small></p>
+					<p class="text">每人1组，共5组，将道具绑在身后，随着身体抖动将盒子中的乒乓球抖出，最先将乒乓球抖干净或在规定时间内剩余球数最少的选手获胜，胜出1名</p>
+					<p id="shenglonghuohu">
+						<audio style="display: none;" loop="loop" id="a-bg-shenglonghuohu" src="./bgm/game3.mp3"></audio>
+					</p>
+				</section>
+				<section data-transition="convex" data-background-transition="convex">
+					<div class="flex-box">
+						<img style="margin-right: 80px;" data-src="./images/music4.png" class="cd">
+						<div>
+							<h2>上海滩</h2>
+							<p>演唱：嘉宾</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="flex-box">
+						<div class="gift-pic"></div>
+						<div>
+							<h3>欢乐大抽奖</h3>
+							<p>一等奖（1名），科沃斯扫地机</p>
+						</div>
+					</div>
+				</section>
+				<section data-background-iframe="../DZMLuckyDraw/lucky-draw.html?awardType=1" data-background-interactive>
+					<p id="yidengjiang">
+						<audio style="display: none;" loop="loop" autoplay="autoplay" src="./bgm/choujiang.mp3"></audio>
+					</p>
+				</section>
+				<section data-transition="convex" data-background-transition="convex">
+					<div class="flex-box">
+						<img src="./images/game.png" style="height: 300px;">
+						<h3>游戏-硬币组合</h3>
+					</div>
+					<p class="text des"><small>游戏规则：</small></p>
+					<p class="text">男生定义为5角，女生定义为1元，所有人围成一个圈，当裁判喊出一个数字时，参与人必须迅速的组合成这个数字。如：裁判说2元，那可以是2个女生或4个男生或1个女生和2个男生，组合失败的将会有小惩罚哦</p>
+					<p id="jitiyouxi">
+						<audio style="display: none;" loop="loop" id="a-bg-jitiyouxi" src="./bgm/game4.mp3"></audio>
+					</p>
+					<p class="fragment" id="jitiyouxi-frg">
+						<audio style="display: none;" loop="loop" autoplay="autoplay" src="./bgm/jitiyouxi.mp3"></audio>
+					</p>
+				</section>
+				<section>
+					<div class="flex-box">
+						<div class="gift-pic"></div>
+						<div>
+							<h3>欢乐大抽奖</h3>
+							<p>特等奖（1名），2000元购物卡</p>
+						</div>
+					</div>
+				</section>
+				<section data-background-iframe="../DZMLuckyDraw/lucky-draw.html?awardType=4" data-background-interactive>
+					<p id="tedengjiang">
+						<audio style="display: none;" loop="loop" autoplay="autoplay" src="./bgm/choujiang.mp3"></audio>
+					</p>
+				</section>
+				<section data-transition="convex" data-background-transition="convex">
+					<div class="flex-box">
+						<img data-src="./images/jinli.png" style="height: 420px;margin-right: 80px;">
+						<h2>祝大家新年快乐</h2>
+					</div>
+					<p id="xiangqinxiangai">
+						<audio style="display: none;" loop="loop" src="./bgm/xiangqinxiangai.mp3"></audio>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			localStorage.setItem('winning-users', JSON.stringify([]));
+			
+			var startTime = 3 * 60 * 1000 + 1000;
+			var _time = null;
+			var showtime = function (lefttime) {
+				if (startTime <= 0) {
+					clearInterval(_time);
+					return "00 : 00";
+				}
+				leftm = Math.floor(lefttime/(1000*60)%60),  //计算分钟数
+				leftm = leftm < 10 ? `0${leftm}` : leftm;
+				lefts = Math.floor(lefttime/1000%60);  //计算秒数
+				lefts = lefts < 10 ? `0${lefts}` : lefts;
+				return leftm + " : " + lefts;  //返回倒计时的字符串
+			}
+
+
+
+			Reveal.initialize({
+				hash: true,
+				width: 1260,
+				keyboard: true,
+				progress: false,
+				postMessage: true,
+				postMessageEvents: true,
+				autoPlayMedia: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+			function handleChangePPT() {
+				const code = event.keyCode
+                ? event.keyCode
+                : event.which
+                    ? event.which
+                    : event.charCode;
+
+				if (code == 13 || code == 39 || code == 40) {
+					clearInterval(_time);
+					startTime = 3 * 60 * 1000 + 1000;
+					Reveal.next();
+				}
+
+				if (code == 37 || code == 38) {
+					clearInterval(_time);
+					startTime = 3 * 60 * 1000 + 1000;
+					Reveal.prev();
+				}
+			}
+
+			function handleClickChangePPT() {
+				clearInterval(_time);
+				startTime = 3 * 60 * 1000 + 1000;
+				Reveal.next();
+			}
+
+			Reveal.on( 'fragmentshown', event => {
+				if (event.fragment.id === 'shenglonghuohu-frg') {
+					document.getElementById('a-bg-shenglonghuohu').pause();
+
+					var p = document.getElementById("timer");
+					const updateTimer = function () {
+						startTime -= 1000;
+						p.innerHTML = showtime(startTime);
+						if (startTime <= 0) {
+							p.innerHTML = "00 : 00";
+							clearInterval(_time);
+						}
+					};
+					updateTimer();
+					const _time = setInterval (updateTimer, 1000);
+				} else if (event.fragment.id === 'zhici') {
+					const _audio = document.getElementById('a-zhici');
+					_audio.play();
+				} else if (event.fragment.id === 'zhici-stop') {
+					const _audio = document.getElementById('a-zhici');
+					_audio.pause();
+				} else if (event.fragment.id === 'zhuye') {
+					const _audio = document.getElementById('a-zhuye');
+					_audio.play();
+				} else if (event.fragment.id === 'huhushengwei-frg') {
+					document.getElementById('a-bg-huhushengwei').pause();
+				} else if (event.fragment.id === 'hutouhunao-frg') {
+					document.getElementById('a-bg-hutouhunao').pause();
+				} else if (event.fragment.id === 'jitiyouxi-frg') {
+					document.getElementById('a-bg-jitiyouxi').pause();
+				}
+			});
+
+			Reveal.on( 'fragmenthidden', event => {
+				clearInterval(_time);
+			});
+
+			// document.addEventListener("keyup", handleChangePPT);
+			// document.addEventListener("click", handleClickChangePPT);
+
+			// Reveal.on( 'slidechanged', event => {
+			// 	if (event.indexh === 7 || event.indexh === 10 || event.indexh === 14 || event.indexh === 17) {
+			// 		document.removeEventListener("keyup", handleChangePPT);
+			// 		document.removeEventListener("click", handleClickChangePPT);
+			// 	} else {
+			// 		document.addEventListener("keyup", handleChangePPT);
+			// 		document.addEventListener("click", handleClickChangePPT);
+			// 		window.focus();
+			// 	}
+			// });
+
+			window.addEventListener( 'message', event => {
+				var data = JSON.parse( event.data );
+				if ( data.namespace === 'reveal' && data.eventName === 'slidechanged' ) {
+					window.focus();
+					Reveal.next();
+				}
+			} );
+		</script>
+	</body>
+</html>
